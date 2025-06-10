@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home – fuzzonaut</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Nav -->
+  <nav class="top-nav">
+    <div id="menuToggle" class="menu-toggle">☰</div>
+    <h1>Welcome to fuzzonaut.me</h1>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="gamedev.html">Game Dev</a>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section style="text-align: center; margin-top: 3rem;">
+      <h2>Hello, I'm Bürçehan!</h2>
+      <p>This site showcases my work across game development, machine learning, encryption, and more.</p>
+      <p>Feel free to explore each section using the sidebar ☰ or links below:</p>
+    </section>
+
+    <section style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+      <a href="about.html" class="portfolio-item"><h3>About Me</h3></a>
+      <a href="portfolio.html" class="portfolio-item"><h3>Projects</h3></a>
+      <a href="gamedev.html" class="portfolio-item"><h3>Game Dev</h3></a>
+      <a href="https://github.com/fuzzonaut" class="portfolio-item" target="_blank"><h3>GitHub</h3></a>
+    </section>
+  </main>
+
+  <!-- Toggle Sidebar Script -->
+  <script>
+    const sidebar = document.getElementById("sidebar");
+    const toggle = document.getElementById("menuToggle");
+
+    toggle.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+    });
+
+    sidebar.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+      });
+    });
+  </script>
+</body>
+</html>
