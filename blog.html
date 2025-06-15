@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blog – fuzzonaut</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+    <h1>My Blog</h1>
+  </nav>
+
+  <aside class="sidebar" id="sidebar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="gamedev.html">Game Dev</a>
+    <a href="blog.html">Blog</a>
+  </aside>
+
+  <main class="container">
+    <section class="resume">
+      <h2>Blog Posts</h2>
+      <ul>
+        <li><a href="posts/first-post.html">How I Made My First Game</a></li>
+        <li><a href="posts/second-post.html">What I Learned from Publishing on Itch.io</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
