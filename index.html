@@ -7,19 +7,23 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Top Nav -->
-  <nav class="top-nav">
-    <div id="menuToggle" class="menu-toggle">☰</div>
-    <h1>Welcome to fuzzonaut.me</h1>
-  </nav>
+
+  <!-- ✅ Sidebar Toggle (no JS needed) -->
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-toggle"></label>
 
   <!-- Sidebar -->
-  <aside class="sidebar" id="sidebar">
+  <aside class="sidebar">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="gamedev.html">Game Dev</a>
   </aside>
+
+  <!-- Top Nav -->
+  <nav class="top-nav">
+    <h1>Welcome to fuzzonaut.me</h1>
+  </nav>
 
   <!-- Main Content -->
   <main class="container">
@@ -37,21 +41,5 @@
     </section>
   </main>
 
-  <!-- Toggle Sidebar Script -->
-  <script>
-    const sidebar = document.getElementById("sidebar");
-    const toggle = document.getElementById("menuToggle");
-
-    toggle.addEventListener("click", () => {
-      sidebar.classList.toggle("active");
-    });
-
-    sidebar.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        sidebar.classList.remove("active");
-      });
-    });
-  </script>
 </body>
 </html>
-
